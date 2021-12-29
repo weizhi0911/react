@@ -1,5 +1,11 @@
+import LoginForm from "../../compent/LoginForm";
+
 function Login() {
-  return <div>login</div>;
+  return (
+    <div>
+      <LoginForm />
+    </div>
+  );
 }
 
-export default Login
+export default Login;
