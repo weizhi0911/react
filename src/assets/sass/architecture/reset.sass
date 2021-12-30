@@ -1,0 +1,150 @@
+/* 初始化样式 */
+html,
+body,
+div,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+button,
+a,
+table,
+thead,
+tbody,
+tr,
+th,
+td,
+blockquote,
+img
+  margin: 0
+  padding: 0
+
+input,
+button,
+select,
+textarea,
+audio,
+video
+  outline: none
+  border: none
+  font-family: $font-family
+
+textarea
+  resize: none
+  font-family: $font-family
+
+ul li
+  list-style: none
+
+ol li
+  list-style-type: decimal
+
+i,
+em
+  font-style: normal
+
+a
+  font-family: $font-family
+  text-decoration: none
+  cursor: pointer
+
+  // 去除移动端 a 标签点击会有蓝色的背景色
+  -webkit-tap-highlight-color: transparent
+
+  &:hover
+    text-decoration: underline
+    text-decoration: none
+
+img
+  border: none
+  // img标签2px间隙解决方案
+  vertical-align: middle
+  // 禁止图片拖动
+  pointer-events: none
+
+table
+  border-spacing: 0
+
+button
+  font-family: $font-family
+  background-color: unset
+  cursor: pointer
+
+/* 去除浏览器输入框类型为数字 增加的上下箭头 */
+input
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button
+    -webkit-appearance: none !important
+
+  &[type="number"]
+    -moz-appearance: textfield
+
+/* 谷歌浏览器输入框记住账号密码后的背景色 */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill
+  background-color: transparent
+  background-image: none
+  transition: background-color 50000s ease-in-out 0s
+
+html,
+body
+  height: 100%
+  height: 100vh
+
+html
+  -webkit-text-size-adjust: 100
+
+body
+  font: 14px/1 $font-family, 'Acumin Variable Concept'
+  color: $color-title
+  background-color: $bgc-body
+
+  a
+    color: $color-title
+
+  img
+    user-select: none
+
+  .guide
+    img
+      user-select: auto
+
+// 居中布局滚动条防抖 S
+html
+  overflow-y: auto
+
+body
+  width: 100%
+  width: 100vw
+
+:root
+  overflow: auto
+  overflow-x: hidden
+
+:root body
+  position: absolute
+
+@media screen and ( max-width: $min-width )
+  body
+    overflow: auto
+// 居中布局滚动条防抖 E
+
+.icon
+  width: 16px
+  height: 16px
+  vertical-align: -0.15em
+  fill: currentColor
+  overflow: hidden
+  flex: none !important

@@ -18,7 +18,79 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@api/*": [
+        "src/api/*"
+      ],
+      "@archImg/*": [
+        "src/assets/images/architecture/*"
+      ],
+      "@globalImg/*": [
+        "src/assets/images/global/*"
+      ],
+      "@viewsImg/*": [
+        "src/assets/images/views/*"
+      ],
+      "@archSass/*": [
+        "src/assets/sass/architecture/*"
+      ],
+      "@bizSass/*": [
+        "src/assets/sass/business/*"
+      ],
+      "@globalSass/*": [
+        "src/assets/sass/global/*"
+      ],
+      "@bizCmp/*": [
+        "src/components/business/*"
+      ],
+      "@globalCmp/*": [
+        "src/components/global/*"
+      ],
+      "@archConf/*": [
+        "src/config/architecture/*"
+      ],
+      "@bizConf/*": [
+        "src/config/business/*"
+      ],
+      "@archInterface/*": [
+        "src/interface/architecture/*"
+      ],
+      "@bizInterface/*": [
+        "src/interface/business/*"
+      ],
+      "@globalInterface/*": [
+        "src/interface/global/*"
+      ],
+      "@bizMixins/*": [
+        "src/mixins/business/*"
+      ],
+      "@globalMixins/*": [
+        "src/mixins/global/*"
+      ],
+      "@archType/*": [
+        "src/type/architecture/*"
+      ],
+      "@bizType/*": [
+        "src/type/business/*"
+      ],
+      "@globalType/*": [
+        "src/type/global/*"
+      ],
+      "@archUtils/*": [
+        "src/utils/architecture/*"
+      ],
+      "@bizUtils/*": [
+        "src/utils/business/*"
+      ],
+      "@globalUtils/*": [
+        "src/utils/global/*"
+      ]
+    }
   },
   "include": [
     "src"

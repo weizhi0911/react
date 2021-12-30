@@ -1,0 +1,63 @@
+$color: #7F57FF
+
+.g-datepicker
+  .el-date-table td
+    &.start-date,
+    &.end-date
+      span
+        background-color: $color
+
+    &.today span
+      color: $color
+
+    &.available:hover
+      color: $color
+
+  .el-picker-panel__body-wrapper
+    position: relative
+
+    .el-date-range-picker__time-header
+      position: absolute
+      bottom: -45px
+      z-index: 1
+
+      display: flex
+      width: auto
+      border-bottom: none
+
+      .el-date-range-picker__editors-wrap
+        .el-date-range-picker__time-picker-wrap
+          &:last-child
+            display: none
+
+          .el-date-range-picker__editor
+            width: 110px
+
+            input
+              pointer-events: none
+
+      .el-icon-arrow-right
+        display: none
+
+  .el-picker-panel__footer
+    padding: 8px 4px
+
+    .el-button--default
+      color: $color
+      border-color: $color
+
+    .el-button--text
+      color: $color
+
+    .el-button.is-plain
+      &:focus,
+      &:hover,
+      &:active
+        border-color: $color
+        background-color: $color
+
+        &.el-button--default
+          color: #fff
+
+  .el-picker-panel__shortcut:hover
+    color: $color

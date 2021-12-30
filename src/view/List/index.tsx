@@ -1,6 +1,6 @@
-import { useState, Suspense } from "react";
+import { useState } from "react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
-// import Login from "../Login/index";
+import "./index.sass";
 
 // import Routers from "../../routers";
 // import { useNavigate, Outlet } from "react-router-dom";
@@ -41,12 +41,12 @@ function List(props: any) {
   if (location.pathname !== "/login") {
     visionAssembly = (
       <div>
-        {listFn()}
-        <p>{msg}</p>
-        <button onClick={() => setMsg("3333")}>change</button>
-        <Suspense fallback={<div>loading</div>}>
-          <Link to="/">Home</Link>
-        </Suspense>
+        <div className="tabs">{listFn()}</div>
+        <p>msg:{msg}</p>
+        <button onClick={() => setMsg("3333")}>change msg</button>
+        <div>
+          link标签登录： <Link to="/">Home</Link>
+        </div>
       </div>
     );
   }

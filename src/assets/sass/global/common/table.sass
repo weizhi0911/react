@@ -1,0 +1,55 @@
+.g-table
+  margin: 0 auto
+  table-layout: fixed
+  font-size: 12px
+
+  tbody
+    display: block
+
+    tr
+      overflow: hidden
+
+  &.normal
+    thead,
+    thead th,
+    tbody tr,
+    tbody tr td
+      display: flex
+      align-items: center
+
+      height: 100%
+
+    thead
+      height: 40px
+
+      background-color: #F1F5F9
+      color: #666
+
+    tbody
+      color: #333
+
+      tr
+        height: 30px
+
+        &:nth-of-type(even)
+          background-color: #F8FAFC
+
+  &.flex-1
+    thead th,
+    tbody tr td
+      flex: 1
+
+  &.bd
+    tbody tr
+      border-bottom: 1px solid #EDF0F3
+
+  &.center
+    thead th,
+    tbody tr td
+      // justify-content: center
+      justify-content: flex-start
+      padding-left: 5px
+
+  &.modal
+    tbody
+      overflow-y: auto

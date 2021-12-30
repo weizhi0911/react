@@ -1,0 +1,37 @@
+$distance: 12px
+
+.g-gather
+  &-channels, &-summary
+    display: flex
+    align-items: center
+    justify-content: space-around
+
+    text-align: center
+
+    .title
+      margin-bottom: $distance
+      font-size: 20px
+      color: #333
+
+    .desc
+      font-size: 12px
+      color: #999
+
+    &.column-reverse
+      li
+        display: flex
+        flex-direction: column-reverse
+
+        .title
+          margin-top: $distance
+
+    &.row-reverse
+
+      li
+        display: flex
+        flex-direction: row-reverse
+        align-items: center
+
+        .title
+          margin-bottom: 0
+          font-size: 12px

@@ -1,0 +1,78 @@
+#g-loading-wrap
+  z-index: 20000
+
+.g-loading
+  $color: #4d75ff
+
+  .g-loading-outer,
+  .g-loading-inner
+    box-sizing: border-box
+
+    border: 5px solid $color
+    border-top-color: transparent
+    border-bottom-color: transparent
+    border-radius: 50%
+    opacity: .9
+
+  .g-loading-outer
+    $size: 60px
+
+    width: $size
+    height: $size
+    margin: 0 auto
+
+  .g-loading-inner
+    $size: 40px
+
+    position: absolute
+    top: 10px
+    left: calc(50% - 20px)
+
+    width: $size
+    height: $size
+
+  .g-loading-msg
+    margin-top: 10px
+    color: $color
+
+.g-loading-spinner
+  $color: #062b4e
+
+  .g-loading-spinner-list
+    $size: 40px
+
+    z-index: 10000
+    width: $size
+    height: $size
+    margin: 0 auto
+
+    border-radius: 50%
+
+    li
+      $step: 0.1s
+      $deg: 30deg
+      $total: 12
+      display: block
+      background-color: #bdcbd8
+
+      transform-origin: $size / 2 $size / 2
+
+      &:after
+        content: " "
+        display: block
+        position: absolute
+
+        left: $size / 2
+        width: 4px
+        height: 12px
+        border-radius: 20%
+        background-color: $color
+
+      @for $i from 1 through $total
+        &:nth-child(#{$i})
+          transform: rotate(($i - 1) * $deg)
+          animation-delay: -$duration-spinner + $step * $i
+
+  .g-loading-spinner-msg
+    margin-top: 10px
+    color: $color

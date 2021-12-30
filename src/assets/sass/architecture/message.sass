@@ -1,0 +1,113 @@
+#g-message-wrap
+  position: fixed
+  left: 50%
+  top: 150px
+  z-index: 10000
+  transform: translateX(-50%)
+
+  .g-message
+    box-sizing: border-box
+    display: flex
+    align-items: center
+
+    // min-width: 240px
+    padding: 13px 60px 13px 30px
+    border-width: 1px
+    border-style: solid
+    border-radius: 4px
+    font-size: 14px
+
+    overflow: hidden
+
+    .icon
+      $size: 20px
+
+      display: inline-block
+      margin-right: 10px
+      width: $size
+      height: $size
+      display: flex
+      align-items: center
+      justify-content: center
+
+      border-radius: 50%
+      font-weight: bold
+      text-align: center
+      color: #fff
+
+    .close
+      position: absolute
+      top: 50%
+      right: 15px
+      transform: translateY(-50%)
+      margin-top: -1px
+
+      font-size: 20px
+      color: #c0c4cc
+      cursor: pointer
+
+      &:hover
+        color: #0d0f13
+
+    .content
+      padding-right: 16px
+      line-height: 1
+      font-size: 14px
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+    &.success
+      $color: #26C06D
+
+      color: $color
+      border-color: #92DFB6
+      background-color: #DFF6E9
+
+      .icon
+        background-color: $color
+
+        &:before
+          @extend .g-icon-success
+          content: ''
+          width: 5px
+          height: 10px
+          margin-bottom: 4px
+
+    &.error
+      $color: #FA3636
+
+      color: $color
+      border-color: #FCB1B1
+      background-color: #FEE1E1
+
+      .icon
+        background-color: $color
+
+        &:before
+          content: '×'
+          color: #fff
+          font-size: 18px
+          transform: translate(-0.5px, -0.5px)
+          margin-top: -2px
+          margin-left: 1px
+
+    &.warning
+      $color: #FDA913
+
+      color: $color
+      border-color: #FED489
+      background-color: #FFF2DC
+
+      .icon
+        background-color: $color
+
+    &.info
+      $color: #909399
+
+      color: $color
+      border-color: #ebeef5
+      background-color: #edf2fc
+
+      .icon
+        background-color: $color

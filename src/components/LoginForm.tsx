@@ -1,8 +1,12 @@
 import { Form, Input, Checkbox, Button } from "antd";
+import { useNavigate } from 'react-router-dom'
 
 function LoginForm() {
+  let navigate = useNavigate();
+
   const onFinish = (values: any) => {
     console.log("Success:", values);
+    navigate('/')
   };
 
   const onFinishFailed = (errorInfo: any) => {
